@@ -27,6 +27,8 @@ const work = [
     body: "We created the booking site for The Greek Wedding Show, the open-air wedding performance in Santorini. Guests choose a date, reserve their seats, and complete the evening online.",
     href: "https://www.thegreekweddingshow.com/",
     label: "thegreekweddingshow.com",
+    image: "/work-greek-wedding-show.png",
+    imageAlt: "The Greek Wedding Show booking site",
   },
   {
     kicker: "Partner",
@@ -34,6 +36,8 @@ const work = [
     body: "Moddule is the intelligence layer for global supply chains: it unifies operational data, scores predictions, and orchestrates action across the systems a company already runs. Melrock is a partner.",
     href: "https://moddule.com",
     label: "moddule.com",
+    image: "/work-moddule.png",
+    imageAlt: "Moddule supply chain platform",
   },
 ] as const;
 
@@ -202,6 +206,14 @@ export default function Home() {
             <div className="mt-14 grid gap-px bg-line/15 sm:grid-cols-2">
               {work.map((item) => (
                 <article key={item.title} className="bg-background px-0 py-10 sm:px-10 sm:py-12 sm:first:pl-0 sm:last:pr-0">
+                  <Image
+                    src={item.image}
+                    alt={item.imageAlt}
+                    width={1440}
+                    height={875}
+                    className="mb-8 aspect-[16/10] w-full border border-line/15 object-cover object-top"
+                    sizes="(min-width: 640px) 560px, 100vw"
+                  />
                   <p className="text-[12px] tracking-[0.22em] text-stone uppercase">
                     {item.kicker}
                   </p>
