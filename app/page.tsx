@@ -27,8 +27,10 @@ const work = [
     body: "We created the booking site for The Greek Wedding Show, the open-air wedding performance in Santorini. Guests choose a date, reserve their seats, and complete the evening online.",
     href: "https://www.thegreekweddingshow.com/",
     label: "thegreekweddingshow.com",
-    image: "/work-greek-wedding-show.png",
+    image: "/work-greek-wedding-show.jpg",
     imageAlt: "The Greek Wedding Show booking site",
+    width: 1440,
+    height: 946,
   },
   {
     kicker: "Partner",
@@ -38,6 +40,8 @@ const work = [
     label: "moddule.com",
     image: "/work-moddule.png",
     imageAlt: "Moddule supply chain platform",
+    width: 1440,
+    height: 891,
   },
 ] as const;
 
@@ -209,8 +213,8 @@ export default function Home() {
                   <Image
                     src={item.image}
                     alt={item.imageAlt}
-                    width={1440}
-                    height={875}
+                    width={item.width}
+                    height={item.height}
                     className="mb-8 aspect-[16/10] w-full border border-line/15 object-cover object-top"
                     sizes="(min-width: 640px) 560px, 100vw"
                   />
